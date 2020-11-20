@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+:root{
+    --border-color: rgb(28, 28, 30);
+    --border-color-two: rgb(58, 58, 60);
+}
+
+body{
+    background: url("../img/back.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover
+}
+
+main {
+    max-width: 1200px;
+    padding: 2em;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+    main { grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #codeupValues { grid-column: 1 / span 2; }
+}
+@media (min-width: 1600px) {
+    main { grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr;
+        max-width: 2000px;
+    }
+    #codeupValues { grid-column: 1 / span 4; }
+}
+
+section {
+    text-align: center;
+    font-size: 2rem;
+    margin:.3em;
+    background-color: darkgreen;
+    color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.6);
+    
+}
+
+.rgb{
+    color: none;
+    text-shadow: 2px 2px 2px #1a1919;
+    animation-name: colors;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.container{
+    padding: 1em;
+}
+
+.container div{
+    color:white;
+    text-shadow:2px 2px 2px rgba(34, 34, 34, 0.705);
+}
+
+.value {
+}
+
+#codeupLogo {
+    
+}
+
+/*Here is where you can set styles for the different sections*/
+#codeupValues {
+    background: #333;
+}
+#codeupValues h2 {
+    /*color: coral;*/
+    /*font-family: "Apple Chancery";*/
+}
+#codeupValues p {
+    color: darkseagreen;
+    
+}
+
+#BH {
+    background-color: darkolivegreen;
+}
+#BH h2 {
+    /*color: blueviolet;*/
+}
+#BH p {
+
+}
+
+#CIG {
+    background-color: darkgreen;
+}
+#CIG h2 {
+
+}
+#CIG p {
+
+}
+
+#DE {
+    background-color: forestgreen;
+}
+#DE h2 {
+
+}
+#DE p {
+
+}
+
+#AWI {
+    background-color: darkseagreen;
+}
+#AWI h2 {
+
+}
+#AWI p {
+
+}
+
+.buttons{
+    display:grid;
+    border-radius: 5px 5px 0 0;
+    grid-template-columns: 20px 20px 20px auto;
+    background: linear-gradient(0deg, var(--border-color), var(--border-color-two))
+}
+
+.buttons div{
+    height:14px;
+    margin:3px 3px;
+    background: rgb(255, 96, 92);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.buttons div:nth-child(2n){
+    background: rgb(255, 189, 68);
+}
+
+.buttons div:nth-child(3n){
+    background: rgb(0, 202, 78);
+}
+
+
+.buttons div:last-child{
+    height:16px;
+    margin:2px 2px;
+    background: var(--main-bg-color);
+    display: inline-block;
+}
+
+@keyframes colors{
+    10%{
+        color: #FF0000
+    }
+    20%{
+        color: #FF7F00
+    }
+    30%{
+        color: #FFFF00
+    }
+    40%{
+        color: #00FF00
+    }
+    50%{
+        color: #0000FF
+    }
+    60%{
+        color: #2E2B5F
+    }
+    70%{
+        color: #8B00FF
+    }
+    100%{
+        color: #FF0000
+    }
+}
